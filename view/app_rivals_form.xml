@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part product_rivals module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Rivals">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="app"/>
+    <field name="app"/>
+    <label name="app_uri"/>
+    <field name="app_uri"/>
+    <label name="scheduler"/>
+    <field name="scheduler"/>
+    <group col="6" colspan="6" id="rivals_buttons">
+        <button name="update_prices" string="Update Prices" icon="tryton-go-next"/>
+    </group>
+</form>

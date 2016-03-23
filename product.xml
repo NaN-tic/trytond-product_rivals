@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!-- This file is part product_rivals module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- product.rivals -->
+        <record model="ir.ui.view" id="product_rivals_view_form">
+            <field name="model">product.rivals</field>
+            <field name="type">form</field>
+            <field name="name">product_rivals_form</field>
+        </record>
+        <record model="ir.ui.view" id="product_rivals_view_tree">
+            <field name="model">product.rivals</field>
+            <field name="type">tree</field>
+            <field name="name">product_rivals_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_product_rivals_form">
+            <field name="name">Product Rivals</field>
+            <field name="res_model">product.rivals</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_product_rivals_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="product_rivals_view_tree"/>
+            <field name="act_window" ref="act_product_rivals_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_configuration_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="product_rivals_view_form"/>
+            <field name="act_window" ref="act_product_rivals_form"/>
+        </record>
+        <menuitem parent="product.menu_main_product" action="act_product_rivals_form" id="menu_product_rivals_form"/>
+
+        <!-- product.template -->
+        <record model="ir.ui.view" id="template_view_form">
+            <field name="model">product.template</field>
+            <field name="inherit" ref="product.template_view_form"/>
+            <field name="name">template_form</field>
+        </record>
+
+        <!-- product.product -->
+        <record model="ir.ui.view" id="product_view_form">
+            <field name="model">product.product</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="product.product_view_form"/>
+            <field name="name">product_form</field>
+        </record>
+    </data>
+</tryton>

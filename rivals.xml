@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- This file is part product_rivals module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- product.app.rivals -->
+        <record model="ir.ui.view" id="app_rivals_view_form">
+            <field name="model">product.app.rivals</field>
+            <field name="type">form</field>
+            <field name="name">app_rivals_form</field>
+        </record>
+        <record model="ir.ui.view" id="app_rivals_view_tree">
+            <field name="model">product.app.rivals</field>
+            <field name="type">tree</field>
+            <field name="name">app_rivals_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_app_rivals_form">
+            <field name="name">App Rivals</field>
+            <field name="res_model">product.app.rivals</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_app_rivals_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="app_rivals_view_tree"/>
+            <field name="act_window" ref="act_app_rivals_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_app_rivals_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="app_rivals_view_form"/>
+            <field name="act_window" ref="act_app_rivals_form"/>
+        </record>
+        <menuitem parent="product_configuration.menu_configuration" action="act_app_rivals_form" id="menu_app_rivals_form"/>
+
+        <record model="ir.cron" id="cron_product_app_rivals">
+            <field name="name">Product APP Rivals</field>
+            <field name="request_user" ref="res.user_admin"/>
+            <field name="user" ref="res.user_trigger"/>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="number_calls">-1</field>
+            <field name="repeat_missed" eval="False"/>
+            <field name="model">product.app.rivals</field>
+            <field name="function">cron_rivals</field>
+        </record>
+    </data>
+</tryton>

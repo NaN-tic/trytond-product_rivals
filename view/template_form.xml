@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- This file is part of product_rivals module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@id=&quot;general&quot;]/field[@name=&quot;cost_price_method&quot;]"
+            position="after">
+        <label name="list_price_supplier"/>
+        <field name="list_price_supplier"/>
+    </xpath>
+</data>
