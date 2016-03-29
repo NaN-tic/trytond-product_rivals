@@ -5,7 +5,9 @@ copyright notices and license terms. -->
 <data>
     <xpath expr="/form/notebook/page[@id=&quot;general&quot;]/field[@name=&quot;cost_price_method&quot;]"
             position="after">
-        <label name="list_price_supplier"/>
-        <field name="list_price_supplier"/>
+        <label name="list_price_min_rival"/>
+        <field name="list_price_min_rival"/>
+        <label name="list_price_max_rival"/>
+        <field name="list_price_max_rival"/>
     </xpath>
 </data>

@@ -1,3 +1,147 @@
 #
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:product.app.rivals,app:"
+msgid "APP"
+msgstr "APP"
+
+msgctxt "field:product.app.rivals,app_uri:"
+msgid "App URI"
+msgstr "App URI"
+
+msgctxt "field:product.app.rivals,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:product.app.rivals,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:product.app.rivals,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.app.rivals,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.app.rivals,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.app.rivals,scheduler:"
+msgid "Scheduler"
+msgstr "Planificador de tareas"
+
+msgctxt "field:product.app.rivals,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.app.rivals,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.product,rivals:"
+msgid "Rivals"
+msgstr "Rivales"
+
+msgctxt "field:product.rivals,app:"
+msgid "App"
+msgstr "App"
+
+msgctxt "field:product.rivals,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:product.rivals,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:product.rivals,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:product.rivals,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.rivals,price:"
+msgid "Price"
+msgstr "Precio"
+
+msgctxt "field:product.rivals,product:"
+msgid "Product"
+msgstr "Producto"
+
+msgctxt "field:product.rivals,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.rivals,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.rivals,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template,list_price_max_rival:"
+msgid "List Price Max Rival"
+msgstr "Precio venta max rivales"
+
+msgctxt "field:product.template,list_price_min_rival:"
+msgid "List Price Min Rival"
+msgstr "Precio venta min rivales"
+
+msgctxt "help:product.app.rivals,scheduler:"
+msgid "Active by crons (import)"
+msgstr "Activar con acciones planificadas (importación)"
+
+msgctxt "help:product.template,list_price_max_rival:"
+msgid "List price maximum rival"
+msgstr "Precio venta máximo rivales"
+
+msgctxt "help:product.template,list_price_min_rival:"
+msgid "List price minimum rival"
+msgstr "Precio venta mínimo rivales"
+
+msgctxt "model:ir.action,name:act_app_rivals_form"
+msgid "App Rivals"
+msgstr "App URI"
+
+msgctxt "model:ir.action,name:act_product_rivals_form"
+msgid "Product Rivals"
+msgstr "Producto rivales"
+
+msgctxt "model:ir.cron,name:cron_product_app_rivals"
+msgid "Product APP Rivals"
+msgstr "App producto rivales"
+
+msgctxt "model:ir.ui.menu,name:menu_app_rivals_form"
+msgid "App Rivals"
+msgstr "App rivales"
+
+msgctxt "model:ir.ui.menu,name:menu_product_rivals_form"
+msgid "Product Rivals"
+msgstr "Producto rivales"
+
+msgctxt "model:product.app.rivals,name:"
+msgid "Product App Rivals"
+msgstr "App producto rivales"
+
+msgctxt "model:product.rivals,name:"
+msgid "Product Rivals"
+msgstr "Producto rivales"
+
+msgctxt "view:product.app.rivals:"
+msgid "Rivals"
+msgstr "Rivales"
+
+msgctxt "view:product.app.rivals:"
+msgid "Update Prices"
+msgstr "Actualizar precios"
+
+msgctxt "view:product.rivals:"
+msgid "Rivals"
+msgstr "Rivales"

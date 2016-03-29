@@ -13,11 +13,18 @@ class Template:
     __name__ = 'product.template'
     __metaclass__ = PoolMeta
 
-    list_price_supplier = fields.Property(fields.Numeric('List Price Supplier',
+    list_price_min_rival = fields.Numeric('List Price Min Rival',
         states={
             'readonly': ~Eval('active', True),
             },
-        digits=price_digits, depends=['active']))
+        digits=price_digits, depends=['active'],
+        help='List price minimum rival')
+    list_price_max_rival = fields.Numeric('List Price Max Rival',
+        states={
+            'readonly': ~Eval('active', True),
+            },
+        digits=price_digits, depends=['active'],
+        help='List price maximum rival')
 
 
 class Product:
