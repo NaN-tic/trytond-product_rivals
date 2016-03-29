@@ -10,6 +10,10 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
     <field name="app_uri"/>
     <label name="scheduler"/>
     <field name="scheduler"/>
+    <label name="formula_min_price"/>
+    <field name="formula_min_price"/>
+    <label name="formula_max_price"/>
+    <field name="formula_max_price"/>
     <group col="6" colspan="6" id="rivals_buttons">
         <button name="update_prices" string="Update Prices" icon="tryton-go-next"/>
     </group>

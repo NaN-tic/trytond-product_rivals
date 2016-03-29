@@ -18,6 +18,14 @@ msgctxt "field:product.app.rivals,create_uid:"
 msgid "Create User"
 msgstr "Usuario creación"
 
+msgctxt "field:product.app.rivals,formula_max_price:"
+msgid "Formula Max Price"
+msgstr "Fórmula precio máximo"
+
+msgctxt "field:product.app.rivals,formula_min_price:"
+msgid "Formula Min Price"
+msgstr "Fórmula precio mínimo"
+
 msgctxt "field:product.app.rivals,id:"
 msgid "ID"
 msgstr "ID"
@@ -93,6 +101,14 @@ msgstr "Precio venta max rivales"
 msgctxt "field:product.template,list_price_min_rival:"
 msgid "List Price Min Rival"
 msgstr "Precio venta min rivales"
+
+msgctxt "help:product.app.rivals,formula_max_price:"
+msgid "Eval expresion to save maximum rival price"
+msgstr "Evaluar expresión para guardar el precio máximo del rival"
+
+msgctxt "help:product.app.rivals,formula_min_price:"
+msgid "Eval expresion to save minnium rival price"
+msgstr "Evaluar expresión para guardar el precio mínimo del rival"
 
 msgctxt "help:product.app.rivals,scheduler:"
 msgid "Active by crons (import)"

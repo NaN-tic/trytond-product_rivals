@@ -1,11 +1,8 @@
 # This file is part product_rivals module for Tryton.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
-import urllib2
-from xml.dom import minidom
 from decimal import Decimal
 from trytond.model import ModelSQL, ModelView, fields
-from trytond.pool import Pool
 from trytond.pyson import Eval, Bool
 
 __all__ = ['ProductAppRivals']
@@ -23,6 +20,10 @@ class ProductAppRivals(ModelSQL, ModelView):
         }, depends=['app'])
     scheduler = fields.Boolean('Scheduler',
         help='Active by crons (import)')
+    formula_min_price = fields.Char('Formula Min Price',
+        help='Eval expression to save minnium rival price')
+    formula_max_price = fields.Char('Formula Max Price',
+        help='Eval expression to save maximum rival price')
 
     @classmethod
     def __setup__(cls):
@@ -57,3 +58,13 @@ class ProductAppRivals(ModelSQL, ModelView):
             ])
         cls.update_prices(apps)
         return True
+
+    def get_context_formula(self, record):
+        return {
+            'names': {
+                'record': record,
+            },
+            'functions': {
+                'Decimal': Decimal,
+                },
+            }
