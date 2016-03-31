@@ -29,7 +29,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="view" ref="app_rivals_view_form"/>
             <field name="act_window" ref="act_app_rivals_form"/>
         </record>
-        <menuitem parent="product_configuration.menu_configuration" action="act_app_rivals_form" id="menu_app_rivals_form"/>
+        <menuitem parent="product.menu_configuration" action="act_app_rivals_form" id="menu_app_rivals_form"/>
 
         <record model="ir.cron" id="cron_product_app_rivals">
             <field name="name">Product APP Rivals</field>
