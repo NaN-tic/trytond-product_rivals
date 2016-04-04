@@ -2,6 +2,7 @@
 <!-- This file is part product_rivals module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
 <tree string="Rivals">
+    <field name="product"/>
     <field name="name"/>
     <field name="price"/>
     <field name="app"/>
