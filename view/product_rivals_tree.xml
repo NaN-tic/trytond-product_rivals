@@ -4,5 +4,6 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
 <tree string="Rivals">
     <field name="name"/>
     <field name="price"/>
+    <field name="price_w_tax"/>
     <field name="app"/>
 </tree>

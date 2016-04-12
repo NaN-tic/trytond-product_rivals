@@ -2,10 +2,15 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from decimal import Decimal
+from trytond.pool import Pool
+
+from trytond.config import config
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.pyson import Eval, Bool
 
+
 __all__ = ['ProductAppRivals']
+DIGITS = config.getint('product', 'price_decimal', default=4)
 
 
 class ProductAppRivals(ModelSQL, ModelView):
@@ -20,6 +25,7 @@ class ProductAppRivals(ModelSQL, ModelView):
         }, depends=['app'])
     scheduler = fields.Boolean('Scheduler',
         help='Active by crons (import)')
+    tax_included = fields.Boolean('Tax Included')
     formula_min_price = fields.Char('Formula Min Price',
         help='Eval expression to save minnium rival price')
     formula_max_price = fields.Char('Formula Max Price',
@@ -68,3 +74,16 @@ class ProductAppRivals(ModelSQL, ModelView):
                 'Decimal': Decimal,
                 },
             }
+
+    def get_price_without_tax(self, product, price_with_tax):
+        Tax = Pool().get('account.tax')
+        taxes = [Tax(t) for t in product.get_taxes('customer_taxes_used')]
+        tax_amount = Tax.reverse_compute(price_with_tax, taxes)
+        return tax_amount.quantize(Decimal(str(10.0 ** -DIGITS)))
+
+    def get_price_with_tax(self, product, price_without_tax):
+        Tax = Pool().get('account.tax')
+        taxes = [Tax(t) for t in product.get_taxes('customer_taxes_used')]
+        tax_amount = Tax.compute(taxes, price_without_tax, 1.0)
+        tax_amount = sum([t['amount'] for t in tax_amount], Decimal('0.0'))
+        return price_without_tax + tax_amount
