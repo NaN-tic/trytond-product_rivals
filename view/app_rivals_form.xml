@@ -10,6 +10,8 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
     <field name="app_uri"/>
     <label name="scheduler"/>
     <field name="scheduler"/>
+    <label name="tax_included"/>
+    <field name="tax_included"/>
     <label name="formula_min_price"/>
     <field name="formula_min_price"/>
     <label name="formula_max_price"/>

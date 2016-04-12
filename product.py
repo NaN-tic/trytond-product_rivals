@@ -43,6 +43,8 @@ class ProductRivals(ModelSQL, ModelView):
         'Product', ondelete='CASCADE', required=True)
     name = fields.Char('Name', required=True)
     price = fields.Numeric('Price', digits=price_digits, required=True)
+    price_w_tax = fields.Numeric('Price With Tax', digits=price_digits,
+        required=True)
     app = fields.Many2One('product.app.rivals',
         'App', ondelete='CASCADE')
 
