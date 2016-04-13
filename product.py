@@ -34,6 +34,9 @@ class Product:
     rivals = fields.One2Many('product.rivals',
             'product', 'Rivals')
 
+    def validate_min_max_price(product, rival_prices):
+        return True
+
 
 class ProductRivals(ModelSQL, ModelView):
     'Product Rivals'
