@@ -42,6 +42,10 @@ msgctxt "field:product.app.rivals,scheduler:"
 msgid "Scheduler"
 msgstr "Planificador de tareas"
 
+msgctxt "field:product.app.rivals,tax_included:"
+msgid "Tax Included"
+msgstr "Impuestos incluidos"
+
 msgctxt "field:product.app.rivals,write_date:"
 msgid "Write Date"
 msgstr "Fecha modificación"
@@ -78,6 +82,10 @@ msgctxt "field:product.rivals,price:"
 msgid "Price"
 msgstr "Precio"
 
+msgctxt "field:product.rivals,price_w_tax:"
+msgid "Price With Tax"
+msgstr "Precio con impuestos"
+
 msgctxt "field:product.rivals,product:"
 msgid "Product"
 msgstr "Producto"
@@ -103,11 +111,11 @@ msgid "List Price Min Rival"
 msgstr "Precio venta min rivales"
 
 msgctxt "help:product.app.rivals,formula_max_price:"
-msgid "Eval expresion to save maximum rival price"
+msgid "Eval expression to save maximum rival price"
 msgstr "Evaluar expresión para guardar el precio máximo del rival"
 
 msgctxt "help:product.app.rivals,formula_min_price:"
-msgid "Eval expresion to save minnium rival price"
+msgid "Eval expression to save minnium rival price"
 msgstr "Evaluar expresión para guardar el precio mínimo del rival"
 
 msgctxt "help:product.app.rivals,scheduler:"
