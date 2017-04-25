@@ -6,9 +6,17 @@ msgctxt "field:product.app.rivals,app:"
 msgid "APP"
 msgstr "APP"
 
+msgctxt "field:product.app.rivals,app_password:"
+msgid "App Password"
+msgstr "App Password"
+
 msgctxt "field:product.app.rivals,app_uri:"
 msgid "App URI"
 msgstr "App URI"
+
+msgctxt "field:product.app.rivals,app_username:"
+msgid "App Username"
+msgstr "App Username"
 
 msgctxt "field:product.app.rivals,create_date:"
 msgid "Create Date"
