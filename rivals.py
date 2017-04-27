@@ -84,13 +84,13 @@ class ProductAppRivals(ModelSQL, ModelView):
 
     def get_price_without_tax(self, product, price_with_tax):
         Tax = Pool().get('account.tax')
-        taxes = [Tax(t) for t in product.get_taxes('customer_taxes_used')]
+        taxes = [Tax(t) for t in product.template.get_taxes('customer_taxes_used')]
         tax_amount = Tax.reverse_compute(price_with_tax, taxes)
         return tax_amount.quantize(Decimal(str(10.0 ** -DIGITS)))
 
     def get_price_with_tax(self, product, price_without_tax):
         Tax = Pool().get('account.tax')
-        taxes = [Tax(t) for t in product.get_taxes('customer_taxes_used')]
+        taxes = [Tax(t) for t in product.template.get_taxes('customer_taxes_used')]
         tax_amount = Tax.compute(taxes, price_without_tax, 1.0)
         tax_amount = sum([t['amount'] for t in tax_amount], Decimal('0.0'))
         return price_without_tax + tax_amount
@@ -104,6 +104,7 @@ class ProductAppRivals(ModelSQL, ModelView):
         to_create = []
         to_write = []
         template_write = []
+        id_ = self.id
 
         codes = values.keys()
 
@@ -122,6 +123,7 @@ class ProductAppRivals(ModelSQL, ModelView):
                         price = Decimal(rivals[rival])
                         price_w_tax = self.get_price_with_tax(p, price)
                     if rival in product_rivals: # write
+                        # TODO write same rival and app?
                         to_write.extend(([product_rivals[rival]], {
                             'price': price,
                             'price_w_tax': price_w_tax,
@@ -132,6 +134,7 @@ class ProductAppRivals(ModelSQL, ModelView):
                             'name': rival,
                             'price': price,
                             'price_w_tax': price_w_tax,
+                            'app': id_,
                             })
 
                 rival_prices = {}
