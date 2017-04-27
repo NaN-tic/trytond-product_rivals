@@ -104,6 +104,7 @@ class ProductAppRivals(ModelSQL, ModelView):
         to_create = []
         to_write = []
         template_write = []
+        id_ = self.id
 
         codes = values.keys()
 
@@ -121,6 +122,7 @@ class ProductAppRivals(ModelSQL, ModelView):
                     else:
                         price = Decimal(rivals[rival])
                         price_w_tax = self.get_price_with_tax(p, price)
+                    # TODO write same rival and app?
                     if rival in product_rivals: # write
                         to_write.extend(([product_rivals[rival]], {
                             'price': price,
@@ -132,6 +134,7 @@ class ProductAppRivals(ModelSQL, ModelView):
                             'name': rival,
                             'price': price,
                             'price_w_tax': price_w_tax,
+                            'app': id_,
                             })
 
                 rival_prices = {}
