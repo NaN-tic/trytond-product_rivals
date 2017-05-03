@@ -20,11 +20,11 @@ msgstr "App Username"
 
 msgctxt "field:product.app.rivals,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:product.app.rivals,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:product.app.rivals,formula_max_price:"
 msgid "Formula Max Price"
@@ -56,11 +56,11 @@ msgstr "Impuestos incluidos"
 
 msgctxt "field:product.app.rivals,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:product.app.rivals,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:product.product,rivals:"
 msgid "Rivals"
@@ -72,11 +72,11 @@ msgstr "App"
 
 msgctxt "field:product.rivals,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:product.rivals,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:product.rivals,id:"
 msgid "ID"
@@ -104,11 +104,11 @@ msgstr "Nombre"
 
 msgctxt "field:product.rivals,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:product.rivals,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:product.template,list_price_max_rival:"
 msgid "List Price Max Rival"
@@ -155,8 +155,8 @@ msgid "App Rivals"
 msgstr "App rivales"
 
 msgctxt "model:ir.ui.menu,name:menu_product_rivals_form"
-msgid "Product Rivals"
-msgstr "Producto rivales"
+msgid "Rivals"
+msgstr "Rivales"
 
 msgctxt "model:product.app.rivals,name:"
 msgid "Product App Rivals"

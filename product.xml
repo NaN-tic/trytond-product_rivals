@@ -29,7 +29,9 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="view" ref="product_rivals_view_form"/>
             <field name="act_window" ref="act_product_rivals_form"/>
         </record>
-        <menuitem parent="product.menu_main_product" action="act_product_rivals_form" id="menu_product_rivals_form"/>
+        <menuitem parent="product.menu_main_product"
+          action="act_product_rivals_form" id="menu_product_rivals_form"
+          name="Rivals"/>
 
         <!-- product.template -->
         <record model="ir.ui.view" id="template_view_form">
